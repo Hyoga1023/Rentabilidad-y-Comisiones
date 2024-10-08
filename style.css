@@ -76,7 +76,9 @@ input, select {
     text-align: center;
     margin-top: 0;
 }
-
+.enlace_ficha_tecnica{
+    color: rgb(248, 224, 10);
+}
 footer {
     background-color: rgb(248, 224, 10);
     color: black;
