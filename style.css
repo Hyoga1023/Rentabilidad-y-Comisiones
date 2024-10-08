@@ -5,7 +5,7 @@
 
 body {
     font-family: 'Diodrum Semibold', sans-serif;
-    background-color: rgb(241, 241, 34);
+    background-color: black;
     margin: 0;
     padding: 20px;
     display: flex;
@@ -26,7 +26,7 @@ body {
     text-align: center;
     font-family: diodrum semibold;
     font-size: 3.5rem;
-    color: rgb(8, 8, 151);
+    color: rgb(248, 224, 10);
     margin-bottom: 0;
 }
 
@@ -65,19 +65,21 @@ input, select {
     margin-top: 10px;
 }
 .parrafo{
+    color: white;
     font-family: diodrum semibold;
     text-align: center;
     margin-bottom: 0;
 }
 .parrafo2{
+    color: white;
     font-family: diodrum semibold;
     text-align: center;
     margin-top: 0;
 }
 
 footer {
-    background-color: black;
-    color: white;
+    background-color: rgb(248, 224, 10);
+    color: black;
     margin-top: 100px;
     text-align: center;
     padding: 10px;
