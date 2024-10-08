@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Diodrum Semibold';
+    src: url('./diodrum-/DiodrumCyrillic-Semibold.ttf') format('woff');
+}
+
+body {
+    font-family: 'Diodrum Semibold', sans-serif;
+    background-color: yellow;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.titulo__principal{
+    text-align: center;
+    font-family: diodrum semibold;
+    font-size: 3.5rem;
+    color: rgb(8, 8, 151);
+    margin-bottom: 0;
+}
+
+h1 {
+    text-align: center;
+    font-family: diodrum semibold;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.section {
+    display: none;
+    margin-top: 20px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box; /* Asegura que el padding no exceda el ancho */
+}
+
+.results, .comision {
+    margin-top: 20px;
+}
+
+.comision {
+    font-weight: bold;
+    margin-top: 10px;
+}
+.parrafo{
+    font-family: diodrum semibold;
+    text-align: center;
+    margin-bottom: 0;
+}
+.parrafo2{
+    font-family: diodrum semibold;
+    text-align: center;
+    margin-top: 0;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    margin-top: 30px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
