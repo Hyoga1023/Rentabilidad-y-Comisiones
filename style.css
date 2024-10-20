@@ -93,3 +93,10 @@ a {
     text-align: center;
     margin-top: 20px;
 }
+.logo_desarrollador{
+    display: flex;
+    justify-content: center;
+}
+.logo_des{
+    width: 50%;
+}
