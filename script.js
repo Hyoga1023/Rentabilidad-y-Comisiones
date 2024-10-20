@@ -20,8 +20,8 @@ function calcularRentabilidad(tipo) {
     const monto = parseFloat(montoInput.value);
     const porcentaje = parseFloat(porcentajeInput.value);
 
-    if (isNaN(monto) || monto > 200000000) {
-        alert('Por favor, ingrese un monto válido no mayor a $200,000,000');
+    if (isNaN(monto) || monto > 300000000) {
+        alert('Por favor, ingrese un monto válido no mayor a $300,000,000');
         return;
     }
 
