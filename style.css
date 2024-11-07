@@ -53,7 +53,7 @@ input, select {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    box-sizing: border-box; /* Asegura que el padding no exceda el ancho */
+    box-sizing: border-box;
 }
 
 .results, .comision {
@@ -129,6 +129,6 @@ a {
     }
 
     .logo_des {
-        width: 70%;
+        width: 60%;
     }
 }
