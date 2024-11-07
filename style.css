@@ -53,6 +53,7 @@ input, select {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
+    font-size: 15px;
     box-sizing: border-box;
 }
 
@@ -100,7 +101,7 @@ a {
 .logo_desarrollador{
     display: flex;
     justify-content: center;
-    margin-bottom: 2%;
+    margin-bottom: 4px;
 }
 .logo_des{
     width: 30%;
@@ -130,5 +131,6 @@ a {
 
     .logo_des {
         width: 50%;
+        margin-bottom: 2px;
     }
 }
