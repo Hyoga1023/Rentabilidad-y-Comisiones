@@ -5,7 +5,7 @@ function mostrarSeccion(seccion) {
 }
 
 function formatearNumeroConSeparadores(numero) {
-    // Usa toLocaleString para agregar separadores de miles
+    // Se usa toLocaleString para agregar separadores de miles
     return numero.toLocaleString('es-CO', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
 
