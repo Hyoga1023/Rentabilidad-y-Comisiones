@@ -1,3 +1,43 @@
+// Función para formatear número con separadores de miles
+function formatNumber(number) {
+    return new Intl.NumberFormat('es-CO').format(number);
+}
+
+// Función para limpiar el formato y obtener solo números
+function cleanNumber(number) {
+    return number.replace(/\D/g, '');
+}
+
+// Función para manejar el input y mantener el cursor en la posición correcta
+function handleInput(input) {
+    // Guardar la posición del cursor
+    const start = input.selectionStart;
+    const end = input.selectionEnd;
+    
+    // Obtener solo los números del valor actual
+    const value = cleanNumber(input.value);
+    
+    // Si no hay valor, limpiar el campo
+    if (!value) {
+        input.value = '';
+        return;
+    }
+    
+    // Formatear el número
+    const formattedValue = formatNumber(value);
+    
+    // Calcular la diferencia de longitud para ajustar el cursor
+    const lengthDiff = formattedValue.length - input.value.length;
+    
+    // Actualizar el valor del input
+    input.value = formattedValue;
+    
+    // Reposicionar el cursor
+    if (start) {
+        input.setSelectionRange(start + lengthDiff, end + lengthDiff);
+    }
+}
+
 function mostrarSeccion(seccion) {
     document.getElementById('ahorroVoluntario').style.display = 'none';
     document.getElementById('cesantias').style.display = 'none';
@@ -5,7 +45,6 @@ function mostrarSeccion(seccion) {
 }
 
 function formatearNumeroConSeparadores(numero) {
-    // Se usa toLocaleString para agregar separadores de miles
     return numero.toLocaleString('es-CO', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
 
@@ -17,7 +56,8 @@ function calcularRentabilidad(tipo) {
     const montoInput = document.getElementById(idMonto);
     const porcentajeInput = document.getElementById(idPorcentaje);
     
-    const monto = parseFloat(montoInput.value);
+    // Limpiar el formato para obtener solo el número
+    const monto = parseFloat(cleanNumber(montoInput.value));
     const porcentaje = parseFloat(porcentajeInput.value);
 
     if (isNaN(monto) || monto > 300000000) {
@@ -41,6 +81,7 @@ function calcularRentabilidad(tipo) {
     const comisionDiv = document.getElementById(tipo === 'ahorroVoluntario' ? 'comisionAhorro' : 'comisionCesantias');
     comisionDiv.innerHTML = `Comisión del Asesor: $${formatearNumeroConSeparadores(comision)}`;
 }
+
 function limpiarCampos(tipo) {
     let idMonto = tipo === 'ahorroVoluntario' ? 'montoAhorro' : 'montoCesantias';
     let idPorcentaje = tipo === 'ahorroVoluntario' ? 'porcentajeAhorro' : 'porcentajeCesantias';
@@ -55,3 +96,19 @@ function limpiarCampos(tipo) {
     document.getElementById(idResultados).innerHTML = '';
     document.getElementById(idComision).innerHTML = '';
 }
+
+// Agregar los event listeners cuando el documento esté listo
+document.addEventListener('DOMContentLoaded', function() {
+    // Configurar los inputs numéricos
+    const montoAhorro = document.getElementById('montoAhorro');
+    const montoCesantias = document.getElementById('montoCesantias');
+    
+    // Agregar el evento input a ambos campos
+    montoAhorro.addEventListener('input', function() {
+        handleInput(this);
+    });
+    
+    montoCesantias.addEventListener('input', function() {
+        handleInput(this);
+    });
+});
