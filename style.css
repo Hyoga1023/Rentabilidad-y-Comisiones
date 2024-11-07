@@ -115,12 +115,12 @@ a {
     }
 
     button {
-        font-size: 15px;
+        font-size: 14px;
         padding: 6px;
     }
 
     input, select {
-        font-size: 12px;
+        font-size: 15px;
         padding: 6px;
     }
     .copyright{
